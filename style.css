@@ -1,0 +1,124 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2 rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 2000px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/wd1.jpg);
+  background-position: 0 -550px;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(2px);
+  filter: brightness(0.7);
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+}
+.hero h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.4rem;
+}
+.hero a {
+  color: var(--pink);
+  background-color: white;
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+.container p {
+  text-decoration: none;
+}
+.container {
+  min-height: 100vh;
+}
+.container .col h2 {
+  padding-top: 3rem;
+}
+#undangan {
+  background-image: url(img/bg2.jpg);
+  background-size: cover;
+  background-position: -150 0;
+}
+.container h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.container p {
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: rgb(179, 101, 125);
+}
+/* Media Query */
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 40px;
+  }
+  .hero::before {
+    background-position: 0 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 5px;
+  }
+}
+
+/* HP */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 3px;
+  }
+  .hero::before {
+    background-position: -50px 0;
+  }
+  .undangan img {
+    width: 45%;
+  }
+}
